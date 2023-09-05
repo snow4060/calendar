@@ -1,0 +1,17 @@
+{
+  "name": "calendar",
+  "ProductName": "Snow's nCalendar",
+  "version": "1.0.0",
+  "description": "snow personal calendar app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "snow",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^25.4.0",
+    "electronmon": "^2.0.2",
+    "toastify-js": "^1.12.0"
+  }
+}
