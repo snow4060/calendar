@@ -1,8 +1,8 @@
 {
   "name": "calendar",
-  "ProductName": "Snow's nCalendar",
+  "ProductName": "Calendar",
   "version": "1.0.0",
-  "description": "snow personal calendar app",
+  "description": "calendar app",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
@@ -12,6 +12,7 @@
   "dependencies": {
     "electron": "^25.4.0",
     "electronmon": "^2.0.2",
+    "toastify": "^2.0.1",
     "toastify-js": "^1.12.0"
   }
 }

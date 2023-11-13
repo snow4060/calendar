@@ -6,7 +6,12 @@ const isDev = process.env.NODE_ENV !== 'production';
 function createMainWindow(){
     const mainWindow = new BrowserWindow({
         title: "Calendar",
-        autoHideMenuBar: "true"
+        autoHideMenuBar: "true",
+        webPreferences: {
+            contextIsolation: true,
+            nodeIntegration: true,
+            preload: path.join(__dirname, 'preload.js')
+        }
     });
     mainWindow.maximize();
 

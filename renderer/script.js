@@ -1,51 +1,72 @@
-const daysTag = document.querySelector(".days"),
-currentDate = document.querySelector(".current-date"),
-prevNextIcon = document.querySelectorAll(".icons span");
+const calendarButton = document.getElementById('calendar-button');
+const taskListButton = document.getElementById('task-list-button');
+const notesButton = document.getElementById('notes-button');
+const settingsButton = document.getElementById('settings-button');
 
-let date = new Date(),
-currYear = date.getFullYear(),
-currMonth = date.getMonth();
+const calendarIcon = document.getElementById('calendar-icon');
+const taskListIcon = document.getElementById('task-list-icon');
+const notesIcon = document.getElementById('notes-icon');
+const settingsIcon = document.getElementById('settings-icon');
 
-const months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+const calendar = document.querySelector('.calendar');
+const taskBar = document.querySelector('.task-bar');
+const taskList = document.querySelector('.task-list');
+const notes = document.querySelector('.notes');
+const settings = document.querySelector('.settings');
 
-const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(),
-    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(),
-    lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(),
-    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
-    let liTag = "";
-
-    for (let i = firstDayofMonth; i > 0; i--) {
-        liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
-    }
-
-    for (let i = 1; i <= lastDateofMonth; i++) {
-        console.log(date.getDate(), new Date().getMonth(), new Date().getFullYear())
-        let isToday = i === date.getDate() && currMonth === new Date().getMonth() 
-                     && currYear === new Date().getFullYear() ? "active" : "";
-        liTag += `<li class="${isToday}">${i}</li>`;
-    }
-
-    for (let i = lastDayofMonth; i < 6; i++) {
-        liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`
-    }
-    currentDate.innerText = `${months[currMonth]} ${currYear}`;
-    daysTag.innerHTML = liTag;
-}
-renderCalendar();
-
-prevNextIcon.forEach(icon => {
-    icon.addEventListener("click", () => {
-        currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
-
-        if(currMonth < 0 || currMonth > 11) {
-            date = new Date(currYear, currMonth, new Date().getDate());
-            currYear = date.getFullYear();
-            currMonth = date.getMonth();
-        } else {
-            date = new Date();
-        }
-        renderCalendar();
-    });
+calendarButton.addEventListener('click', () => {
+    calendar.style.display = 'block';
+    taskBar.style.display = 'block';
+    taskList.style.display = 'none';
+    notes.style.display = 'none';
+    settings.style.display = 'none';
+});
+taskListButton.addEventListener('click', () => {
+    calendar.style.display = 'none';
+    taskBar.style.display = 'none';
+    taskList.style.display = 'block';
+    notes.style.display = 'none';
+    settings.style.display = 'none';
+});
+notesButton.addEventListener('click', () => {
+    calendar.style.display = 'none';
+    taskBar.style.display = 'none';
+    taskList.style.display = 'none';
+    notes.style.display = 'block';
+    settings.style.display = 'none';
+});
+settingsButton.addEventListener('click', () => {
+    calendar.style.display = 'none';
+    taskBar.style.display = 'none';
+    taskList.style.display = 'none';
+    notes.style.display = 'none';
+    settings.style.display = 'block';
+});
+calendarIcon.addEventListener('click', () => {
+    calendar.style.display = 'block';
+    taskBar.style.display = 'block';
+    taskList.style.display = 'none';
+    notes.style.display = 'none';
+    settings.style.display = 'none';
+});
+taskListIcon.addEventListener('click', () => {
+    calendar.style.display = 'none';
+    taskBar.style.display = 'none';
+    taskList.style.display = 'block';
+    notes.style.display = 'none';
+    settings.style.display = 'none';
+});
+notesIcon.addEventListener('click', () => {
+    calendar.style.display = 'none';
+    taskBar.style.display = 'none';
+    taskList.style.display = 'none';
+    notes.style.display = 'block';
+    settings.style.display = 'none';
+});
+settingsIcon.addEventListener('click', () => {
+    calendar.style.display = 'none';
+    taskBar.style.display = 'none';
+    taskList.style.display = 'none';
+    notes.style.display = 'none';
+    settings.style.display = 'block';
 });

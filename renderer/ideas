@@ -1,0 +1,63 @@
+in the middle is the calendar, each day is a block
+- inside each block are the events 
+- timed events are placed in chronological order; not timed events are last
+- when the user clicks on a date it expands the day (showing date month, year, and any events planned for the day). Also button to add event
+
+to the right is the tasks bar
+- split events into different subjects
+- each subject/topic has its own color; the events would also be that color 
+
+to do list mode
+- create untimed tasks 
+- cross them out as they get completed
+- productivity AI
+
+notepad mode
+- notepad, autosaved
+
+timer/alarm clock
+
+creating to do list from tasks on calendar
+
+typing speed tracker if i have time
+
+work pattern analysis 
+
+the different tabs are on the left (kinda like bookmarks yk to switch between the apps)
+
+side panel: 
+- dark blue background
+- lighter blue horizontal bookmarks containing the icons 
+
+
+
+categories json:
+{
+    math: {
+        {
+            name: sdklfskfjs,
+            date: ajjfklfkldf,
+            details: sdkdasfjdskf,
+            complete? bool
+        },
+        {
+            name: dkljflkadsjfkld
+            date: null,
+            details: null,
+            complete? bool
+        }
+    },
+    english: etc
+}
+to do list json
+{
+    title: {
+        name: ajfsdjfljlfkjsdlfd
+        linked? false
+        complete? bool
+    }
+    title2: {
+        linked? [math, dfdsjfasjkfdfa]
+
+    }
+}
